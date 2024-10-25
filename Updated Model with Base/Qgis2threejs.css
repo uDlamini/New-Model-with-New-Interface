@@ -184,15 +184,17 @@ body {
 }
 
 #closebtn {
-  color: #ccc;
+  position: absolute;
+  color: orangered;
   padding: 2px;
-  line-height: 16px;
-  font-size: 16px;
+  line-height: 10px;
+  font-size: 10px;
   font-weight: bold;
   width: 16px;
   height: 16px;
   text-align: center;
   float: right;
+  right: 10px;
   cursor: pointer;
 }
 
@@ -592,7 +594,8 @@ form::after {
   position: relative; /* Relative positioning for the sidepanel */
   width: 300px; /* Adjust width based on your layout */
   height: 100%;
-  top: 20px; /* Full height container */
+  top: 10px;
+  left: 0; /* Full height container */
   z-index: 1059;
   display: flex;
   justify-content: flex-start;
@@ -606,7 +609,7 @@ form::after {
   position: absolute; /* Position relative to its container */
   top: 20px; /* Align with the top of the container */
   left: 0; /* Align with the left of the container */
-  background-color: #111; /* Black background */
+  background-color: blue; /* Black background */
   overflow-x: hidden; /* Disable horizontal scroll */
   padding-top: 60px; /* Place content 60px from the top */
   transition: 0.5s; 
@@ -616,7 +619,7 @@ form::after {
 .sidepanel a {
   padding: 8px 8px 8px 32px;
   text-decoration: none;
-  font-size: 25px;
+  font-size: 15px;
   color: #818181;
   display: block;
   transition: 0.3s;
@@ -630,17 +633,23 @@ form::after {
 /* Position and style the close button */
 .sidepanel .closebtn {
   position: absolute;
+  width: 25px;
+  right: 10px;
   top: 4.5px;
-  left: 0px;
   font-size: 36px;
+  font: center;
   margin-left: 50px;
 }
 
 /* Style for the button used to open the sidepanel */
 .openbtn {
+  position: absolute;
+  font-size: 20px;
+  top:-9px;
+  left: 0;
   font-size: 20px;
   cursor: pointer;
-  background-color: #111;
+  background-color: orangered;
   color: white;
   padding: 10px 15px;
   border: none;
@@ -650,7 +659,96 @@ form::after {
   background-color: #444;
 }
 
+
+.button {
+  position: fixed;           
+  bottom: 20px;             
+  right: 10px;             
+  background-color: blue;   
+  color: white;             
+  padding: 10px 20px;       
+  border: none;             
+  border-radius: 5px;      
+  font-size: 16px;          
+  cursor: pointer;          
+  text-decoration: none;    
+}
+
+.btn {
+  position: fixed;
+  bottom: 20px;
+  right: 120px;
+  background-color: blue;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
 /*End code*/
+
+/*Style the slide show*/
+.showButton {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  margin: 20px auto;
+  display: block;
+}
+
+/* Hide slideshow by default */
+.slideshow-container {
+  display: none;
+  text-align: center;
+}
+
+/* Navigation buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  font-size: 18px;
+  color: white;
+  user-select: none;
+  padding: 12px;
+  background-color: rgba(0,0,0,0.5);
+  border-radius: 3px;
+}
+
+.prev { left: 0; }
+.next { right: 0; }
+
+.showbutton {
+  background-color: #e24c07 !important; /* Green background */
+  color: white; /* White text */
+  padding: 12px 24px; /* Padding around the text */
+  font-size: 16px; /* Font size */
+  font-weight: bold; /* Bold text */
+  border: none;
+  bottom: 6px;
+  left: 0px;
+  border-radius: 5px; 
+  cursor: pointer; 
+  text-transform: uppercase; 
+  transition: 0.3s ease; 
+  margin: 20px auto; 
+  display: block; 
+}
+
+/* Hover effect for button */
+.Showbutton:hover {
+  background-color: #e24c07; /* Darker green on hover */
+}
+/*End Code*/
+
 
 /* images */
 #layerbtn::before {

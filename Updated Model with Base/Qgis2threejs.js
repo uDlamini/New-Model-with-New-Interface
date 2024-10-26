@@ -4585,37 +4585,44 @@ function openNav() {
   }
 //End code
 
+
 //Slide show style
 function showSlideshow() {
-	document.getElementById("slideshow").style.display = "block";
-}
-
-let slideIndex = 1;
-showSlides(slideIndex);
-
-function plusSlides(n) {
+	const slideshow = document.getElementById("slideshow");
+	slideshow.style.display = slideshow.style.display === "block" ? "none" : "block";
+  }
+  
+  let slideIndex = 1;
+  showSlides(slideIndex);
+  
+  function plusSlides(n) {
 	showSlides(slideIndex += n);
-}
-
-function currentSlide(n) {
+  }
+  
+  function currentSlide(n) {
 	showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
+  }
+  
+  function showSlides(n) {
 	let i;
 	let slides = document.getElementsByClassName("mySlides");
 	let dots = document.getElementsByClassName("demo");
 	let captionText = document.getElementById("caption");
-	if (n > slides.length) {slideIndex = 1}    
-	if (n < 1) {slideIndex = slides.length}
+	
+	if (n > slides.length) { slideIndex = 1 }
+	if (n < 1) { slideIndex = slides.length }
+	
 	for (i = 0; i < slides.length; i++) {
-		slides[i].style.display = "none";  
+	  slides[i].style.display = "none";
 	}
+	
 	for (i = 0; i < dots.length; i++) {
-		dots[i].className = dots[i].className.replace(" active", "");
+	  dots[i].className = dots[i].className.replace(" active", "");
 	}
-	slides[slideIndex-1].style.display = "block";  
+	
+	slides[slideIndex-1].style.display = "block";
 	dots[slideIndex-1].className += " active";
 	captionText.innerHTML = dots[slideIndex-1].alt;
-}
+  }
+  
 //End code

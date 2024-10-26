@@ -20,9 +20,6 @@
 <script src="./Qgis2threejs.js"></script>
 </head>
 <body>
-
-  <button class="showButton" onclick="showSlideshow()">Explore Campus</button>
-
 <!--Menu using w3school-->
 <div class="topnav">
   <label class = "logo"><img src="https://i.postimg.cc/5N1qgW37/Spatial-Nexus-Logo.jpg" style="width: 200px;height: 50px;"></label>
@@ -35,6 +32,8 @@
 </div>
 <!--End Code-->
 
+
+
 <!--Side Panel-->
 <div class="sidepanel-container">
   <div id="mySidepanel" class="sidepanel">
@@ -46,9 +45,11 @@
   </div>
   <button class="openbtn" onclick="openNav()">☰ Menu</button>
 </div>
-
-
 <!--End Code-->
+
+
+
+
 <!--Search bar-->
 <div class="form-container">
   <form autocomplete="off">
@@ -59,17 +60,36 @@
   </form>
 </div>
 <!--End Code-->
+
+<!--Explore Campus (exterior) btn-->
+<button class="showButton" onclick="showSlideshow()">Explore Campus</button>
+<!-- End button-->
+
+<!--Campus Art Features-->
+<button class="ArtButton" onclick="showSlideshow()">Art Features</button>
+<!--End Code-->
+
+<!--Campus Art Buildings-->
+<button class="Buildingsbtn" onclick="showSlideshow()">Art Buildings</button>
+<!--End Code-->
+
+<!--View-->
 <div id="view">
   <div id="northarrow"></div>
   <div id="navigation"></div>
 </div>
+<!--End code-->
+
 
 <!-- popup -->
 <div id="popup">
   <div id="closebtn">&times;</div>
   <div id="popupbar"></div>
-  <div id="popupbody">
-    <div id="popupcontent"></div>
+    <div id="popupbody">
+    <div id="popupcontent">
+    </div>
+     </div>
+</div>
 
     <!-- query result -->
     <div id="queryresult">
@@ -155,72 +175,153 @@
   <div id="nextbtn"></div>
 </div>
 
- <!-- Slideshow-->
+ <!-- Slideshow Exterior of Campus-->
  <!--Include Campus pictures-->
  <div id="slideshow" class="slideshow-container">
    <h2 style="text-align:center">UP Hatfield Campus</h2>
 
    <div class="container">
-       <div class="mySlides">
-           <div class="numbertext">1 / 6</div>
-           <img src="img_woods_wide.jpg" style="width:100%">
-       </div>
-       
-       <div class="mySlides">
-           <div class="numbertext">2 / 6</div>
-           <img src="img_5terre_wide.jpg" style="width:100%">
-       </div>
+            <div class="mySlides">
+            <div class="numbertext">1 / 6</div>
+            <img src="https://drive.google.com/file/d/1mHBDDUXWrgGn33SzQeCpgd1w0AHCYJbf/view?usp=drive_link" style="width:100%">
+            </div>
+            
+            <div class="mySlides">
+              <div class="numbertext">2 / 6</div>
+              <img src="img_5terre_wide.jpg" style="width:100%">
+              <div class = "text"> Cap 2</div>
+            </div>
 
-       <div class="mySlides">
-           <div class="numbertext">3 / 6</div>
-           <img src="img_mountains_wide.jpg" style="width:100%">
-       </div>
+            <div class="mySlides">
+                <div class="numbertext">3 / 6</div>
+                <img src="img_mountains_wide.jpg" style="width:100%">
+                <div class = "text"> Cap 3</div>
+            </div>
 
-       <div class="mySlides">
-           <div class="numbertext">4 / 6</div>
-           <img src="img_lights_wide.jpg" style="width:100%">
-       </div>
+            <div class="mySlides">
+                <div class="numbertext">4 / 6</div>
+                <img src="img_lights_wide.jpg" style="width:100%">
+                <div class = "text"> Cap 4</div>
+            </div>
 
-       <div class="mySlides">
-           <div class="numbertext">5 / 6</div>
-           <img src="img_nature_wide.jpg" style="width:100%">
-       </div>
-       
-       <div class="mySlides">
-           <div class="numbertext">6 / 6</div>
-           <img src="img_snow_wide.jpg" style="width:100%">
-       </div>
+            <div class="mySlides">
+                <div class="numbertext">5 / 6</div>
+                <img src="img_nature_wide.jpg" style="width:100%">
+                <div class = "text"> Cap 5</div>
+            </div>
+            
+            <div class="mySlides">
+                <div class="numbertext">6 / 6</div>
+                <img src="img_snow_wide.jpg" style="width:100%">
+                <div class = "text"> Cap 6</div>
+            </div>
 
-       <a class="prev" onclick="plusSlides(-1)">❮</a>
-       <a class="next" onclick="plusSlides(1)">❯</a>
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
 
-       <div class="caption-container">
-           <p id="caption"></p>
-       </div>
-
-       <div class="row">
-           <div class="column">
-               <img class="demo cursor" src="img_woods.jpg" style="width:100%" onclick="currentSlide(1)" alt="The Woods">
-           </div>
-           <div class="column">
-               <img class="demo cursor" src="img_5terre.jpg" style="width:100%" onclick="currentSlide(2)" alt="Cinque Terre">
-           </div>
-           <div class="column">
-               <img class="demo cursor" src="img_mountains.jpg" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
-           </div>
-           <div class="column">
-               <img class="demo cursor" src="img_lights.jpg" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
-           </div>
-           <div class="column">
-               <img class="demo cursor" src="img_nature.jpg" style="width:100%" onclick="currentSlide(5)" alt="Nature and sunrise">
-           </div>    
-           <div class="column">
-               <img class="demo cursor" src="img_snow.jpg" style="width:100%" onclick="currentSlide(6)" alt="Snowy Mountains">
-           </div>
-       </div>
-   </div>
+            <div class="caption-container">
+                <p id="caption"></p>
+            </div>
 </div>
   <!-- End Code-->
+
+  <!--Art Features container-->
+  <div id="Artshow" class="Artshow-container">
+    <h3 style="text-align:center">Art Features</h3>
+ 
+    <div class="container">
+             <div class="mySlides">
+             <div class="numbertext">1 / 6</div>
+             <img src="https://drive.google.com/file/d/1mHBDDUXWrgGn33SzQeCpgd1w0AHCYJbf/view?usp=drive_link" style="width:100%">
+             </div>
+             
+             <div class="mySlides">
+               <div class="numbertext">2 / 6</div>
+               <img src="img_5terre_wide.jpg" style="width:100%">
+               <div class = "text"> Cap 2</div>
+             </div>
+ 
+             <div class="mySlides">
+                 <div class="numbertext">3 / 6</div>
+                 <img src="img_mountains_wide.jpg" style="width:100%">
+                 <div class = "text"> Cap 3</div>
+             </div>
+ 
+             <div class="mySlides">
+                 <div class="numbertext">4 / 6</div>
+                 <img src="img_lights_wide.jpg" style="width:100%">
+                 <div class = "text"> Cap 4</div>
+             </div>
+ 
+             <div class="mySlides">
+                 <div class="numbertext">5 / 6</div>
+                 <img src="img_nature_wide.jpg" style="width:100%">
+                 <div class = "text"> Cap 5</div>
+             </div>
+             
+             <div class="mySlides">
+                 <div class="numbertext">6 / 6</div>
+                 <img src="img_snow_wide.jpg" style="width:100%">
+                 <div class = "text"> Cap 6</div>
+             </div>
+ 
+             <a class="prev" onclick="plusSlides(-1)">❮</a>
+             <a class="next" onclick="plusSlides(1)">❯</a>
+ 
+             <div class="caption-container">
+                 <p id="caption"></p>
+             </div>
+ </div>
+  <!--End code-->
+
+  <!--Art Buildings-->
+  <div id="Buildingshow" class="Buildingshow-container">
+    <h3 style="text-align:center">Art Buildings</h3>
+ 
+    <div class="container">
+             <div class="mySlides">
+             <div class="numbertext">1 / 6</div>
+             <img src="https://drive.google.com/file/d/1mHBDDUXWrgGn33SzQeCpgd1w0AHCYJbf/view?usp=drive_link" style="width:100%">
+             </div>
+             
+             <div class="mySlides">
+               <div class="numbertext">2 / 6</div>
+               <img src="img_5terre_wide.jpg" style="width:100%">
+               <div class = "text"> Cap 2</div>
+             </div>
+ 
+             <div class="mySlides">
+                 <div class="numbertext">3 / 6</div>
+                 <img src="img_mountains_wide.jpg" style="width:100%">
+                 <div class = "text"> Cap 3</div>
+             </div>
+ 
+             <div class="mySlides">
+                 <div class="numbertext">4 / 6</div>
+                 <img src="img_lights_wide.jpg" style="width:100%">
+                 <div class = "text"> Cap 4</div>
+             </div>
+ 
+             <div class="mySlides">
+                 <div class="numbertext">5 / 6</div>
+                 <img src="img_nature_wide.jpg" style="width:100%">
+                 <div class = "text"> Cap 5</div>
+             </div>
+             
+             <div class="mySlides">
+                 <div class="numbertext">6 / 6</div>
+                 <img src="img_snow_wide.jpg" style="width:100%">
+                 <div class = "text"> Cap 6</div>
+             </div>
+ 
+             <a class="prev" onclick="plusSlides(-1)">❮</a>
+             <a class="next" onclick="plusSlides(1)">❯</a>
+ 
+             <div class="caption-container">
+                 <p id="caption"></p>
+             </div>
+ </div>
+  <!--End Code-->
 
 <script>
 Q3D.Config.allVisible = true;

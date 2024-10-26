@@ -12,6 +12,7 @@ body {
 
 #view {
   position: absolute;
+  z-index: 1000 !important;
   width: 100%;
   height: 100%;
 }
@@ -608,7 +609,8 @@ form::after {
   width: 0; /* Initially hidden, adjust with JavaScript */
   position: absolute; /* Position relative to its container */
   top: 20px; /* Align with the top of the container */
-  left: 0; /* Align with the left of the container */
+  left: 0;
+  z-index: 1101; /* Align with the left of the container */
   background-color: blue; /* Black background */
   overflow-x: hidden; /* Disable horizontal scroll */
   padding-top: 60px; /* Place content 60px from the top */
@@ -691,23 +693,32 @@ form::after {
 
 /*Style the slide show*/
 .showButton {
-  display: inline-block;
+  position: absolute; /* Enables positioning */
+  top: 100px;
+  left: 0;
   padding: 10px 20px;
   font-size: 16px;
   cursor: pointer;
-  background-color: #4CAF50;
+  background-color: orangered;
   color: white;
   border: none;
+  z-index: 1100 !important;
   border-radius: 5px;
-  text-align: center;
-  margin: 20px auto;
-  display: block;
+  margin: 0; 
 }
 
-/* Hide slideshow by default */
+/* Center and hide slideshow by default */
 .slideshow-container {
-  display: none;
+  display: none; 
+  position: absolute; 
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); 
   text-align: center;
+  width: 100%; 
+  max-width: 1000px;
+  height: 1000; 
+  z-index: 1001; 
 }
 
 /* Navigation buttons */
@@ -721,34 +732,106 @@ form::after {
   padding: 12px;
   background-color: rgba(0,0,0,0.5);
   border-radius: 3px;
+  transform: translateY(-50%); /* Centers the buttons vertically */
 }
 
 .prev { left: 0; }
 .next { right: 0; }
-
-.showbutton {
-  background-color: #e24c07 !important; /* Green background */
-  color: white; /* White text */
-  padding: 12px 24px; /* Padding around the text */
-  font-size: 16px; /* Font size */
-  font-weight: bold; /* Bold text */
-  border: none;
-  bottom: 6px;
-  left: 0px;
-  border-radius: 5px; 
-  cursor: pointer; 
-  text-transform: uppercase; 
-  transition: 0.3s ease; 
-  margin: 20px auto; 
-  display: block; 
-}
-
-/* Hover effect for button */
-.Showbutton:hover {
-  background-color: #e24c07; /* Darker green on hover */
-}
 /*End Code*/
 
+/*Style ArtFeatures*/
+.ArtButton {
+  position: absolute; /* Enables positioning */
+  top: 139px;
+  left: 0;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: orangered;
+  color: white;
+  border: none;
+  z-index: 1100 !important;
+  border-radius: 5px;
+  margin: 0; 
+}
+
+.Artshow-container {
+  display: none; 
+  position: absolute; 
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); 
+  text-align: center;
+  width: 100%; 
+  max-width: 1000px;
+  height: 1000; 
+  z-index: 1001; 
+}
+
+/* Navigation buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  font-size: 18px;
+  color: white;
+  user-select: none;
+  padding: 12px;
+  background-color: rgba(0,0,0,0.5);
+  border-radius: 3px;
+  transform: translateY(-50%); /* Centers the buttons vertically */
+}
+
+.prev { left: 0; }
+.next { right: 0; }
+/*End code*/
+
+/*Art Buildings*/
+.Buildingsbtn {
+  position: absolute; /* Enables positioning */
+  top: 178px;
+  left: 0;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: orangered;
+  color: white;
+  border: none;
+  z-index: 1100 !important;
+  border-radius: 5px;
+  margin: 0; 
+}
+
+.Artshow-container {
+  display: none; 
+  position: absolute; 
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); 
+  text-align: center;
+  width: 100%; 
+  max-width: 1000px;
+  height: 1000; 
+  z-index: 1001; 
+}
+
+/* Navigation buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  font-size: 18px;
+  color: white;
+  user-select: none;
+  padding: 12px;
+  background-color: rgba(0,0,0,0.5);
+  border-radius: 3px;
+  transform: translateY(-50%); /* Centers the buttons vertically */
+}
+
+.prev { left: 0; }
+.next { right: 0; }
+/*End Code*/
 
 /* images */
 #layerbtn::before {

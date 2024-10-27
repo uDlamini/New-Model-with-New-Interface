@@ -4627,19 +4627,13 @@ function showSlideshow() {
 //End code
 
 //Make the video to interact
-var video = document.getElementById("myVideo");
 
-// Get the button
-var btn = document.getElementById("myBtn");
-
-// Pause and play the video, and change the button text
-function myFunction() {
-  if (video.paused) {
-    video.play();
-    btn.innerHTML = "Pause";
-  } else {
-    video.pause();
-    btn.innerHTML = "Play";
+// Function to hide the video and show the web map
+function nextFunction() {
+// Hide the video container
+document.getElementById("videoContainer").style.display = "none";
+		
+// Show the web map container
+document.getElementById("view").style.display = "block";
   }
-}
 //End functionality

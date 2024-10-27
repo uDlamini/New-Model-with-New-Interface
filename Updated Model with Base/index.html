@@ -19,7 +19,11 @@
 <script src="./threejs/ViewHelper.js"></script>
 <script src="./Qgis2threejs.js"></script>
 </head>
+
+
 <body>
+
+
 <!--Menu using w3school-->
 <div class="topnav">
   <label class = "logo"><img src="https://i.postimg.cc/5N1qgW37/Spatial-Nexus-Logo.jpg" style="width: 200px;height: 50px;"></label>
@@ -82,17 +86,17 @@
 </div>
 <!--End Code-->
 
-<!--Attractive Video-->
-<video autoplay muted loop id="myVideo">
-  <source src="rain.mp4" type="video/mp4">
-</video>
-
-<!--Overlaying text-->
-<div class="content">
-  <h1>Heading</h1>
-  <p>Lorem ipsum...</p>
-  <!-- Use a button to pause/play the video with JavaScript -->
-  <button id="myBtn" onclick="myFunction()">Pause</button>
+<!--Video to enhance users experience-->
+<div id="videoContainer">
+  <!-- Embedded YouTube video -->
+  <iframe id="myVideo" width="100%" height="100%" src="https://www.youtube.com/embed/Tck9o1UyZC8?autoplay=1&mute=1&loop=1&playlist=Tck9o1UyZC8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  <!-- Overlaying text -->
+  <div class="content">
+    <h1>Welcome to the University of Pretoria</h1>
+    <p>Experience campus life as our students go up and down campus</p>
+    <!-- Use a button to proceed to the web map -->
+    <button id="myBtn" onclick="nextFunction()">Next</button>
+  </div>
 </div>
 <!--End code-->
 

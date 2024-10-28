@@ -610,9 +610,9 @@ form::after {
   height: 250px;
   width: 0; 
   position: absolute; 
-  top: 20px; 
+  top: 4px; 
   left: 0;
-  z-index: 1101; 
+  z-index: 1060; 
   background-color: blue; 
   overflow-x: hidden; 
   padding-top: 60px; 
@@ -637,9 +637,9 @@ form::after {
 /* Position and style the close button */
 .sidepanel .closebtn {
   position: absolute;
-  width: 25px;
-  right: 10px;
+  left: 160px;
   top: 4.5px;
+  background-color: none;
   font-size: 36px;
   font: center;
   margin-left: 50px;
@@ -704,7 +704,7 @@ form::after {
   background-color: orangered;
   color: white;
   border: none;
-  z-index: 1100 !important;
+  z-index: 1058 !important;
   border-radius: 5px;
   margin: 0; 
 }
@@ -743,15 +743,15 @@ form::after {
 /*Style ArtFeatures*/
 .ArtButton {
   position: absolute; /* Enables positioning */
-  top: 139px;
+  top: 80px;
   left: 0;
   padding: 10px 20px;
   font-size: 16px;
   cursor: pointer;
-  background-color: orangered;
+  background-color: blue;
   color: white;
   border: none;
-  z-index: 1100 !important;
+  z-index: 1057 !important;
   border-radius: 5px;
   margin: 0; 
 }
@@ -795,10 +795,10 @@ form::after {
   padding: 10px 20px;
   font-size: 16px;
   cursor: pointer;
-  background-color: orangered;
+  background-color: blue;
   color: white;
   border: none;
-  z-index: 1100 !important;
+  z-index: 1056 !important;
   border-radius: 5px;
   margin: 0; 
 }
